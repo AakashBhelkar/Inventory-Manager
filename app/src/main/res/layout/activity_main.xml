@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/main_menu"
+        app:title="Inventory Management"
+        app:titleTextColor="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStockIn"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="24dp"
+            android:text="Stock In"
+            android:textSize="18sp"
+            app:cornerRadius="12dp"
+            app:icon="@drawable/ic_add"
+            app:iconGravity="textStart"
+            app:iconSize="24dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStockOut"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="Stock Out"
+            android:textSize="18sp"
+            app:cornerRadius="12dp"
+            app:icon="@drawable/ic_remove"
+            app:iconGravity="textStart"
+            app:iconSize="24dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
